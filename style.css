@@ -1,0 +1,308 @@
+/*
+--- COLORS
+
+background: #121317;
+gray: #40454D;
+light-gray:#828B9A;
+ivory: #ADADAD;
+brown-gray: ##4A4A4A;
+white: #fff;
+
+--- WHITESPACE
+
+- Spacing system (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+*/
+
+/**************************/
+/* RESET CSS */
+/**************************/
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  /* font-size: 10px; */
+  /* 10px / 16px = 0.625 = 62.5% */
+  /* Percentage of user's browser font-size setting */
+  font-size: 62.5%;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+/**************************/
+/* GENRAL REUSABLE COMPONENTS */
+/**************************/
+
+* {
+  /* Color */
+  --color-black: #121317;
+  --color-gray: #40454d;
+  --color-light-gray: #828b9a;
+  --color-ivory: #adadad;
+  --color-brown-gray: #4a4a4a;
+  --color-white: #fff;
+
+  /* Fonts */
+  --font-judson: "Judson", serif;
+  --font-roboto: "Roboto", sans-serif;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  color: var(--color-white);
+  background-color: var(--color-black);
+}
+
+.text {
+  font-size: 1.6rem;
+  font-weight: 500;
+  line-height: 250%; /* 40px */
+}
+
+.secondary-title-small {
+  color: var(--color-ivory);
+  text-transform: uppercase;
+  font-size: 2.8rem;
+  font-weight: 600;
+}
+
+.secondary-title {
+  font-family: var(--font-judson);
+  font-size: 8.4rem;
+  font-weight: 700;
+  color: var(--color-white);
+}
+
+.btn:link,
+.btn:visited {
+  display: inline-block;
+  text-transform: uppercase;
+  padding: 0 2.7rem;
+
+  font-size: 1.6rem;
+  font-weight: 300;
+  font-size: 2.8rem;
+  line-height: 250%;
+  color: var(--color-ivory);
+  text-align: center;
+  border: 1px solid var(--color-ivory);
+}
+
+/**************************/
+/* HEADER NAVIGATION SECTION */
+/**************************/
+.header-nav {
+  padding: 3.8rem 9rem 0 9rem;
+}
+
+.header-nav-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.site-name {
+  color: var(--color-gray);
+  font-weight: 700;
+  font-size: 3.2rem;
+  font-family: Judson, serif;
+}
+
+.header-nav-items {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+}
+
+.header-nav-item {
+  color: var(--color-light-gray);
+  font-size: 1.6rem;
+  text-transform: uppercase;
+}
+
+/**************************/
+/* HERO SECTION */
+/**************************/
+.hero-section {
+  background-image: url(./public/images/banner.png);
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: center;
+
+  position: relative;
+
+  /* TODO: remove this */
+  height: 108rem;
+}
+
+.hero-text-box {
+  position: absolute;
+  right: 13.2rem;
+  top: 25.5rem;
+}
+
+.primary-title {
+  color: var(--color-black);
+  font-family: var(--font-judson);
+  font-size: 14.4rem;
+  font-weight: 400;
+}
+
+.primary-subtitle {
+  color: var(--color-light-gray);
+  font-size: 2rem;
+  text-transform: uppercase;
+
+  display: flex;
+  align-items: center;
+}
+
+.primary-subtitle:before {
+  content: "";
+  width: 6.3rem;
+  height: 1px;
+  background-color: var(--color-light-gray);
+  margin-right: 1rem;
+}
+
+/**************************/
+/* ABOUT SECTION */
+/**************************/
+.about-section {
+  padding: 15.8rem 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-container {
+  width: 85rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 3.2rem;
+}
+
+.about-container p {
+  text-align: center;
+}
+
+/**************************/
+/* EXCURSIONS SECTION */
+/**************************/
+.excursion-section {
+  padding-top: 15.8rem;
+}
+
+.excursion-container {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  height: 108.4rem;
+}
+
+.excursion-img-box {
+  overflow: hidden;
+  position: relative;
+  padding-right: 8rem;
+}
+.excursion-img-box::after {
+  content: "";
+  position: absolute;
+  top: 31.2rem;
+  right: 3.8rem;
+  width: 12.1rem;
+  height: 7.6rem;
+  background-color: var(--color-ivory);
+}
+
+.excursion-img {
+  object-fit: cover;
+  object-position: left;
+  height: 100%;
+}
+
+.excursion-text-box {
+  max-height: 100%;
+}
+
+.excursion-list {
+  padding-right: 3.8rem;
+}
+
+.excursion-list-item {
+  display: flex;
+  align-items: center;
+  gap: 2.3rem;
+  border-bottom: 4px solid var(--color-ivory);
+
+  font-family: var(--font-judson);
+
+  padding: 3.2rem 0;
+}
+
+.excursion-list-item:first-child {
+  padding-top: 5.5rem;
+}
+
+.excursion-list-item-num {
+  font-size: 11rem;
+  flex-shrink: 0;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.excursion-list-item-text {
+  font-size: 5.3rem;
+  font-weight: 400;
+  line-height: normal;
+}
+
+/**************************/
+/* ATLANTIC SECTION */
+/**************************/
+.atlantic-section {
+  padding: 10rem 0 0 12.2rem;
+  display: flex;
+  justify-content: end;
+  gap: 10.1rem;
+}
+
+.atlantic-text-box {
+  text-align: left;
+  max-width: 50rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3.2rem;
+}
+
+.secondary-subtitle {
+  color: var(--color-ivory);
+  font-size: 2.8rem;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
+.atlantic-img {
+  max-width: 80rem;
+  height: 100%;
+  object-fit: cover;z
+  object-position: left;
+}
